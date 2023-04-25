@@ -18,10 +18,11 @@ namespace Project1
             //Setchu();
             do
             {
-                Console.WriteLine("1. Admin");
-                Console.WriteLine("2. Khách Hàng");
-                Console.WriteLine("3. Thoát");
-                Console.Write("Mời bạn chọn: ");
+                toBi();
+                Console.WriteLine(" 1. Admin");
+                Console.WriteLine(" 2. Khách Hàng");
+                Console.WriteLine(" 3. Thoát");
+                Console.Write(" Mời bạn chọn: ");
                 menu = Convert.ToInt32(Console.ReadLine());
                 while (menu >= 3)
                 {
@@ -33,19 +34,20 @@ namespace Project1
                 {
                     case 1:
                         {
+                            
                             do
                             {
-                               
-                                Console.WriteLine("1. Thêm sản phẩm");
-                                Console.WriteLine("2. Hiển thị danh sách sản phẩm");
-                                Console.WriteLine("3. Tìm kiếm sản phẩm");
-                                Console.WriteLine("4. Xóa sản phẩm");
-                                Console.WriteLine("0. Quay lại ");
-                                Console.Write("Mời bạn chọn: ");
+                                toBi();
+                                Console.WriteLine(" 1. Thêm sản phẩm");
+                                Console.WriteLine(" 2. Hiển thị danh sách sản phẩm");
+                                Console.WriteLine(" 3. Tìm kiếm sản phẩm");
+                                Console.WriteLine(" 4. Xóa sản phẩm");
+                                Console.WriteLine(" 0. Quay lại ");
+                                Console.Write(" Mời bạn chọn: ");
                                 option1 = Convert.ToInt32(Console.ReadLine());
                                 while (option1 > 5)
                                 {
-                                    Console.Write("Mời bạn chọn lại: ");
+                                    Console.Write(" Mời bạn chọn lại: ");
                                     option1 = Convert.ToInt32(Console.ReadLine());
                                 }
                                 switch (option1)
@@ -55,25 +57,28 @@ namespace Project1
                                             Console.Clear();
                                             // Nhập dữ liệu từ bàn phím
                                             char c = 'y';
+                                            
                                             while (c == 'y')
                                             {
+                                                toBi();
                                                 Console.WriteLine("\t\t ---NHAP THONG TIN SAN PHAM---");
 
                                                 // Nhập sản phẩm mới
                                                 var product = InputProduct();
                                                 data.Add(product);
 
-                                                Console.Write("Nhap ky tu 'y' de tiep tuc, ky tu bat ky de thoat: ");
+                                                Console.Write(" Nhap ky tu 'y' de tiep tuc, ky tu bat ky de thoat: ");
                                                 c = Convert.ToChar(Console.ReadLine().ToLower());
                                                 Console.Clear();
                                                 // Hiển thị danh sách sản phẩm
                                             }
-                                            ShowProductTable(data);
+                                            //ShowProductTable(data);
                                             break;
                                         }
                                     case 2:
                                         {
                                             Console.Clear();
+                                            bang();
                                             // Hiển thị danh sách sản phẩm
                                             ShowProductTable(data);
                                             break;
@@ -81,17 +86,19 @@ namespace Project1
                                     case 3:
                                         {
                                             Console.Clear();
+                                            toBi();
                                             var productToDelete = FindProduct(data);
                                             break;
                                         }
                                     case 4:
                                         {
                                             Console.Clear();
-                                            Console.Write("Nhập MA SP muốn xóa: ");
+                                            toBi();
+                                            Console.Write(" Nhập MA SP muốn xóa: ");
                                             string deleteMa = Convert.ToString(Console.ReadLine());
                                             deleteProduct(data, deleteMa);
                                             Console.Clear();
-                                            ShowProductTable(data);
+                                            //ShowProductTable(data);
                                             break;
                                         }
                                     case 0:
@@ -108,15 +115,15 @@ namespace Project1
                         {
                             do
                             {
-                                Console.WriteLine("1. Hiển thị danh sách sản phẩm");
-                                Console.WriteLine("2. Tìm kiếm sản phẩm");
-                                Console.WriteLine("3. Chọn mua sản phẩm");
-                                Console.WriteLine("0. Quay lại ");
-                                Console.Write("Mời bạn chọn: ");
+                                toBi();
+                                Console.WriteLine(" 1. Hiển thị danh sách sản phẩm");
+                                Console.WriteLine(" 2. Tìm kiếm sản phẩm");
+                                Console.WriteLine(" 0. Quay lại ");
+                                Console.Write(" Mời bạn chọn: ");
                                 option2 = Convert.ToInt32(Console.ReadLine());
                                 while (option2 > 4)
                                 {
-                                    Console.Write("Mời bạn chọn lại: ");
+                                    Console.Write(" Mời bạn chọn lại: ");
                                     option2 = Convert.ToInt32(Console.ReadLine());
                                 }
                                 switch (option2)
@@ -124,6 +131,7 @@ namespace Project1
                                     case 1:
                                         {
                                             Console.Clear();
+                                            toBi();
                                             // Hiển thị danh sách sản phẩm
                                             ShowProductTable(data);
                                             break;
@@ -131,12 +139,9 @@ namespace Project1
                                     case 2:
                                         {
                                             Console.Clear();
+                                            toBi();
                                             var productToDelete = FindProduct(data);
                                             break ;
-                                        }
-                                    case 3:
-                                        {
-                                            break;
                                         }
                                     case 0:
                                         {
@@ -145,7 +150,7 @@ namespace Project1
                                         }
                                     
                                 }
-                            } while (option2 < 4 && option2 > 0);
+                            } while (option2 < 3 && option2 > 0);
                             break;
                         }
                 }
@@ -288,6 +293,22 @@ namespace Project1
                 Console.WriteLine($"Không tìm thấy SP có MA {searchMa}");
             }
         }
+
+        static void toBi()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine();
+            Console.WriteLine("\t***** TOBI SHOP *****");
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+        static void bang()
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine();
+            Console.WriteLine("\t***** Danh Sach San Pham *****");
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+  
         static void Setchu()
         {
             Console.SetWindowSize(60, 30); // Thiết lập kích thước cửa sổ console
