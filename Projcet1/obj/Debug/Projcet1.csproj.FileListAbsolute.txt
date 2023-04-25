@@ -1,0 +1,11 @@
+D:\VTCAcademy\CSharp\OPP1\Projcet1\bin\Debug\Projcet1.exe.config
+D:\VTCAcademy\CSharp\OPP1\Projcet1\bin\Debug\Projcet1.exe
+D:\VTCAcademy\CSharp\OPP1\Projcet1\bin\Debug\Projcet1.pdb
+D:\VTCAcademy\CSharp\OPP1\Projcet1\bin\Debug\ConsoleTables.dll
+D:\VTCAcademy\CSharp\OPP1\Projcet1\bin\Debug\ConsoleTables.pdb
+D:\VTCAcademy\CSharp\OPP1\Projcet1\obj\Debug\Projcet1.csproj.AssemblyReference.cache
+D:\VTCAcademy\CSharp\OPP1\Projcet1\obj\Debug\Projcet1.csproj.SuggestedBindingRedirects.cache
+D:\VTCAcademy\CSharp\OPP1\Projcet1\obj\Debug\Projcet1.csproj.CoreCompileInputs.cache
+D:\VTCAcademy\CSharp\OPP1\Projcet1\obj\Debug\Projcet1.csproj.CopyComplete
+D:\VTCAcademy\CSharp\OPP1\Projcet1\obj\Debug\Projcet1.exe
+D:\VTCAcademy\CSharp\OPP1\Projcet1\obj\Debug\Projcet1.pdb
